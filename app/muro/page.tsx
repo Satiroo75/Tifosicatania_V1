@@ -1,14 +1,4 @@
 import Link from 'next/link';
-
 export default function Page() {
-  return (
-    <main className="page">
-      <header className="topbar">
-        <Link className="brand" href="/"><span className="mini-crest" /><span>TIFOSI DEL <b>CATANIA</b></span></Link>
-        <nav className="nav"><Link href="/">HOME</Link><Link href="/muro">MURO DEI TIFOSI</Link><Link href="/regole">REGOLE DEL SITO</Link><Link href="/contatti">CONTATTI</Link></nav>
-        <div className="auth"><Link className="login" href="/login">LOGIN</Link><Link className="register" href="/registrati">REGISTRATI</Link></div>
-      </header>
-      <section className="panel"><h1>Muro dei tifosi</h1><p>La sezione forum verrà collegata dopo l’approvazione definitiva della Home online.</p></section>
-    </main>
-  );
+ return <main className="page"><section className="panel"><h1>Muro dei tifosi</h1><p>Forum iniziale. Dopo l’approvazione della Home online, collegheremo qui le funzioni complete con database.</p><div className="form"><input className="input" placeholder="Titolo del messaggio" /><textarea className="textarea" placeholder="Scrivi il tuo messaggio... 🔴🔵⚽" /><button className="button">Pubblica</button></div><Link className="back" href="/">Torna alla Home</Link></section></main>;
 }

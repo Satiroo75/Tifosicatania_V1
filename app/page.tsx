@@ -3,7 +3,8 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main className="home">
-      <div className="home-art" />
+      <img className="bild1-img" src="/bild1.png" alt="TifosiCatania.it homepage" />
+
       <Link className="hotspot hot-home" href="/">Home</Link>
       <Link className="hotspot hot-muro-nav" href="/muro">Muro dei tifosi</Link>
       <Link className="hotspot hot-regole-nav" href="/regole">Regole del sito</Link>
@@ -13,7 +14,11 @@ export default function Home() {
       <Link className="hotspot hot-regole-btn" href="/regole">Regole del sito</Link>
       <Link className="hotspot hot-muro-btn" href="/muro">Muro dei tifosi</Link>
       <Link className="hotspot hot-opinione" href="/muro">Opinione della settimana</Link>
-      <nav className="mobile-actions"><Link href="/regole">Regole</Link><Link href="/muro">Muro</Link></nav>
+
+      <nav className="mobile-actions">
+        <Link href="/regole">Regole</Link>
+        <Link href="/muro">Muro</Link>
+      </nav>
     </main>
   );
 }

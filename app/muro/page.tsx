@@ -5,7 +5,7 @@ export default function Page() {
     <main className="page">
       <section className="panel">
         <h1>Muro dei tifosi</h1>
-        <p>La sezione forum verrà collegata dopo l’approvazione della Home.</p>
+        <p>Forum iniziale. Dopo l’approvazione dell’header, continueremo con il componente successivo.</p>
         <Link className="back" href="/">Torna alla Home</Link>
       </section>
     </main>

@@ -6,7 +6,6 @@ export default function Page() {
       <section className="panel">
         <h1>Registrati</h1>
         <p>Registrazione in preparazione.</p>
-        
         <Link className="back" href="/">Torna alla Home</Link>
       </section>
     </main>

@@ -1,0 +1,78 @@
+
+.header {
+  height: var(--tc-header-height);
+  display: grid;
+  grid-template-columns: minmax(230px, 1fr) auto minmax(230px, 1fr);
+  align-items: center;
+  gap: 22px;
+  padding: 0 clamp(20px, 4vw, 64px);
+  background: linear-gradient(180deg, rgba(0,0,0,.88), rgba(0,0,0,.38));
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  backdrop-filter: blur(8px);
+}
+
+.brand {
+  font-family: Impact, Haettenschweiler, 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-size: clamp(20px, 2vw, 32px);
+  white-space: nowrap;
+  text-shadow: 0 5px 18px #000;
+}
+
+.brand span {
+  color: var(--tc-blue);
+}
+
+.nav {
+  display: flex;
+  gap: clamp(14px, 2.1vw, 34px);
+  font-size: clamp(11px, .86vw, 14px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  white-space: nowrap;
+}
+
+.nav a {
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: -16px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--tc-red), #fff, var(--tc-blue));
+}
+
+.auth {
+  justify-self: end;
+  display: flex;
+  gap: 14px;
+}
+
+.auth a {
+  min-width: 112px;
+  text-align: center;
+  border-radius: 7px;
+  padding: 13px 18px;
+  font-size: clamp(11px, .82vw, 13px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgba(0,0,0,.3);
+}
+
+.login {
+  border-color: rgba(7,137,255,.75) !important;
+}
+
+.register {
+  border-color: rgba(223,16,38,.85) !important;
+  background: rgba(193,18,31,.54) !important;
+}

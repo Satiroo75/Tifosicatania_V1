@@ -1,25 +1,20 @@
-@import './tokens.css';
 
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#03050b;color:#fff;font-family:Arial,Helvetica,sans-serif}
+a{text-decoration:none;color:inherit}
+.page{min-height:100vh;background:#03050b}
+.stage{position:relative;width:100%;max-width:1536px;margin:0 auto;background:#03050b;line-height:0}
+.master{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
+.logoMask{
+  position:absolute;z-index:8;left:31.8%;top:18.2%;width:36.4%;height:41.2%;
+  background:
+    radial-gradient(circle at 50% 22%,rgba(255,110,20,.35),transparent 28%),
+    radial-gradient(circle at 50% 50%,rgba(5,7,13,.94),rgba(5,7,13,.74) 47%,transparent 72%);
+  border-radius:24%;filter:blur(.2px)
 }
-
-html,
-body {
-  min-height: 100%;
-  margin: 0;
-  background: var(--tc-black);
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+.logoSlot{
+  position:absolute;z-index:10;left:50%;top:38.6%;transform:translate(-50%,-50%);
+  width:clamp(310px,34vw,520px);aspect-ratio:1/1;line-height:1
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button,
-input,
-textarea {
-  font: inherit;
-}
+.devInfo{max-width:1000px;margin:32px auto 60px;padding:0 20px;color:#dbe3ef;line-height:1.45}
+.devInfo h1{font-family:Impact,Haettenschweiler,'Arial Black',sans-serif;text-transform:uppercase;letter-spacing:.05em}

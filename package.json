@@ -1,12 +1,11 @@
 {
-  "name": "tifosicatania-phase1-engine",
+  "name": "tifosicatania-v2-logo-centrale",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "next": "latest",
@@ -16,8 +15,6 @@
   "devDependencies": {
     "typescript": "latest",
     "@types/react": "latest",
-    "@types/node": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest"
+    "@types/node": "latest"
   }
 }

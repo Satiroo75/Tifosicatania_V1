@@ -1,28 +1,22 @@
-import styles from '@/styles/home.module.css';
-import { Header } from '@/components/Header';
-import { Background } from '@/components/Background';
-import { Hero } from '@/components/Hero';
-import { Volcano } from '@/components/Volcano';
-import { Sea } from '@/components/Sea';
-import { Crowd } from '@/components/Crowd';
-import { Smoke } from '@/components/Smoke';
-import { Elephant } from '@/components/Elephant';
+import { CenterLogo } from '@/components/CenterLogo';
 
 export default function Home() {
   return (
-    <main className={styles.home}>
-      <section className={styles.stage}>
-        <div className={styles.reference} aria-hidden="true" />
-        <div className={styles.components}>
-          <Background />
-          <Sea />
-          <Volcano />
-          <Smoke />
-          <Elephant />
-          <Crowd />
-          <Header />
-          <Hero />
+    <main className="page">
+      <section className="stage">
+        <img className="master" src="/reference/bild1-master.png" alt="Bild 1 master" />
+        <div className="logoMask" aria-hidden="true" />
+        <div className="logoSlot">
+          <CenterLogo />
         </div>
+      </section>
+
+      <section className="devInfo">
+        <h1>V2 — Logo centrale reale</h1>
+        <p>
+          In questa versione viene modificato solo il logo centrale. Tutto il resto resta Bild 1.
+          Valutiamo solo proporzioni, bordo, testo, SOM e ombre del logo.
+        </p>
       </section>
     </main>
   );

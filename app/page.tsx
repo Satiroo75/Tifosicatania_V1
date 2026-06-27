@@ -2,32 +2,18 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="page">
+    <main className="home">
       <header className="header">
         <Link className="brand" href="/">TIFOSI DEL <span>CATANIA</span></Link>
-        <nav className="nav">
-          <Link href="/">HOME</Link>
-          <Link href="/muro">MURO DEI TIFOSI</Link>
-          <Link href="/regole">REGOLE DEL SITO</Link>
-          <Link href="/contatti">CONTATTI</Link>
-        </nav>
-        <div className="auth">
-          <Link href="/login">LOGIN</Link>
-          <Link href="/registrati">REGISTRATI</Link>
-        </div>
+        <nav className="nav"><Link href="/">HOME</Link><Link href="/muro">MURO DEI TIFOSI</Link><Link href="/regole">REGOLE DEL SITO</Link><Link href="/contatti">CONTATTI</Link></nav>
+        <div className="auth"><Link href="/login">LOGIN</Link><Link href="/registrati">REGISTRATI</Link></div>
       </header>
-
       <section className="scene" aria-hidden="true">
         <div className="smoke" />
-        <div className="elephant">
-          <div className="ear left" /><div className="ear right" /><div className="head" /><div className="trunk" />
-          <div className="eye left" /><div className="eye right" />
-        </div>
+        <div className="elephant"><div className="ear left" /><div className="ear right" /><div className="head" /><div className="trunk" /><div className="eye left" /><div className="eye right" /></div>
         <div className="volcano" /><div className="land" /><div className="sea" />
-        <div className="fog left" /><div className="fog right" />
-        <div className="crowd left" /><div className="crowd right" />
+        <div className="fog left" /><div className="fog right" /><div className="crowd left" /><div className="crowd right" />
       </section>
-
       <section className="content">
         <div className="logo"><div className="diamond"><div className="logoText"><div className="kicker">TIFOSI DEL</div><div className="title">CATANIA</div><div className="powered">POWERED BY</div><div className="som">SOM</div></div></div></div>
         <h1 className="claim">LA VOCE DEI TIFOSI <span>ROSSA</span><span>ZZURRI</span></h1>

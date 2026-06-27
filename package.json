@@ -1,4 +1,6 @@
 {
+  "name": "tifosicatania-clean-desktop-mobile-v2",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

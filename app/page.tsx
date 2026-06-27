@@ -5,6 +5,7 @@ export default function Home() {
     <main className="home">
       <section className="stage" aria-label="TifosiCatania.it homepage">
         <img className="homeImage" src="/bild1.png" alt="TifosiCatania.it" />
+
         <Link className="hotspot hotHome" href="/">Home</Link>
         <Link className="hotspot hotMuroNav" href="/muro">Muro dei tifosi</Link>
         <Link className="hotspot hotRegoleNav" href="/regole">Regole del sito</Link>
@@ -15,7 +16,8 @@ export default function Home() {
         <Link className="hotspot hotMuroBtn" href="/muro">Muro dei tifosi</Link>
         <Link className="hotspot hotOpinione" href="/muro">Opinione della settimana</Link>
       </section>
-      <nav className="mobileBar" aria-label="Navigazione mobile">
+
+      <nav className="mobileNav" aria-label="Navigazione mobile">
         <Link href="/regole">Regole</Link>
         <Link href="/muro">Muro</Link>
         <Link className="wide" href="/login">Login / Registrati</Link>

@@ -1,11 +1,36 @@
 
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;min-height:100%;background:#03050b;color:#fff;font-family:Arial,Helvetica,sans-serif}
+html,body{margin:0;padding:0;min-height:100%;background:#03050b;color:white;font-family:Arial,Helvetica,sans-serif}
 a{text-decoration:none;color:inherit}
-.home{min-height:100vh;width:100%;background:#03050b}
-.stage{position:relative;width:100%;max-width:1536px;margin:0 auto;line-height:0;background:#03050b}
-.homeImage{display:block;width:100%;height:auto;margin:0 auto;user-select:none;-webkit-user-drag:none}
-.hotspot{position:absolute;z-index:20;display:block;background:transparent;text-indent:-9999px;overflow:hidden}
+
+.home{min-height:100vh;background:#03050b}
+
+/* DESKTOP: immagine completa, nessun taglio */
+.stage{
+  position:relative;
+  width:100%;
+  max-width:1536px;
+  margin:0 auto;
+  background:#03050b;
+  line-height:0;
+}
+.homeImage{
+  display:block;
+  width:100%;
+  height:auto;
+  user-select:none;
+  -webkit-user-drag:none;
+}
+
+/* Link invisibili desktop */
+.hotspot{
+  position:absolute;
+  z-index:20;
+  display:block;
+  background:transparent;
+  text-indent:-9999px;
+  overflow:hidden;
+}
 .hotHome{top:2.0%;left:25.2%;width:7.8%;height:5.0%}
 .hotMuroNav{top:2.0%;left:33.7%;width:12.5%;height:5.0%}
 .hotRegoleNav{top:2.0%;left:47.8%;width:12.8%;height:5.0%}
@@ -15,19 +40,113 @@ a{text-decoration:none;color:inherit}
 .hotRegoleBtn{top:65.5%;left:18.6%;width:31.0%;height:12.2%}
 .hotMuroBtn{top:65.5%;left:50.5%;width:31.0%;height:12.2%}
 .hotOpinione{top:78.4%;left:18.6%;width:62.8%;height:16.5%}
-.mobileBar{display:none}
-.page{min-height:100vh;padding:80px 22px;background:linear-gradient(180deg,rgba(5,7,13,.40),rgba(5,7,13,.96)),url('/bild1.png') center top/cover no-repeat}
-.panel{width:min(980px,100%);margin:0 auto;padding:34px;border-radius:26px;background:rgba(5,9,18,.90);border:1px solid rgba(255,255,255,.16);box-shadow:0 28px 70px rgba(0,0,0,.62);backdrop-filter:blur(12px)}
-.panel h1{margin:0 0 18px;font-family:Impact,Haettenschweiler,'Arial Black',sans-serif;text-transform:uppercase;letter-spacing:.055em;font-size:clamp(42px,6vw,78px)}
-.panel p{margin:0;color:#e3e8f2;font-size:19px;line-height:1.65}
-.back{display:inline-block;margin-top:24px;padding:12px 18px;border-radius:999px;background:linear-gradient(135deg,#0057b8,#c1121f);color:#fff;font-weight:900;text-transform:uppercase;letter-spacing:.07em;font-size:13px}
-.form{display:grid;gap:12px;margin-top:20px}.input,.textarea{width:100%;border:1px solid rgba(255,255,255,.16);border-radius:16px;background:rgba(255,255,255,.07);color:#fff;padding:14px 16px;font-size:16px}.textarea{min-height:140px;resize:vertical}.button{cursor:pointer;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:linear-gradient(135deg,#0057b8,#c1121f);color:#fff;font-weight:900;text-transform:uppercase;letter-spacing:.07em;padding:12px 18px;width:fit-content}
+
+.mobileNav{display:none}
+
+/* Pagine interne */
+.page{
+  min-height:100vh;
+  padding:80px 22px;
+  background:
+    linear-gradient(180deg,rgba(5,7,13,.42),rgba(5,7,13,.96)),
+    url('/bild1.png') center top/cover no-repeat;
+}
+.panel{
+  width:min(980px,100%);
+  margin:0 auto;
+  padding:34px;
+  border-radius:26px;
+  background:rgba(5,9,18,.90);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 28px 70px rgba(0,0,0,.62);
+  backdrop-filter:blur(12px);
+}
+.panel h1{
+  margin:0 0 18px;
+  font-family:Impact,Haettenschweiler,'Arial Black',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.055em;
+  font-size:clamp(42px,6vw,78px);
+}
+.panel p{
+  margin:0;
+  color:#e3e8f2;
+  font-size:19px;
+  line-height:1.65;
+}
+.back{
+  display:inline-block;
+  margin-top:24px;
+  padding:12px 18px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#0057b8,#c1121f);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  font-size:13px;
+}
+.form{display:grid;gap:12px;margin-top:20px}
+.input,.textarea{
+  width:100%;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:16px;
+  background:rgba(255,255,255,.07);
+  color:white;
+  padding:14px 16px;
+  font-size:16px;
+}
+.textarea{min-height:140px;resize:vertical}
+.button{
+  cursor:pointer;
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:999px;
+  background:linear-gradient(135deg,#0057b8,#c1121f);
+  color:white;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  padding:12px 18px;
+  width:fit-content;
+}
+
+/* MOBILE: immagine come hero fullscreen + bottoni mobili reali */
 @media(max-width:760px){
-  .stage{width:100%;max-width:none;min-height:100vh;overflow:hidden}
-  .homeImage{width:100%;height:100vh;object-fit:cover;object-position:center top}
+  .stage{
+    width:100vw;
+    max-width:none;
+    height:100vh;
+    overflow:hidden;
+  }
+  .homeImage{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+  }
   .hotspot{display:none}
-  .mobileBar{position:fixed;z-index:40;left:10px;right:10px;bottom:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
-  .mobileBar a{text-align:center;border-radius:999px;padding:13px 10px;background:rgba(0,0,0,.72);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
-  .mobileBar .wide{grid-column:1/3}
-  .page{padding-top:70px}.panel{padding:24px;border-radius:22px}
+  .mobileNav{
+    position:fixed;
+    z-index:50;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+  }
+  .mobileNav a{
+    text-align:center;
+    border-radius:999px;
+    padding:13px 10px;
+    background:rgba(0,0,0,.74);
+    border:1px solid rgba(255,255,255,.24);
+    backdrop-filter:blur(8px);
+    font-size:12px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+  }
+  .mobileNav .wide{grid-column:1/3}
+  .page{padding-top:70px}
+  .panel{padding:24px;border-radius:22px}
 }

@@ -1,6 +1,6 @@
 {
-  "name": "tifosicatania-v2-logo-centrale",
-  "version": "1.0.0",
+  "name": "tifosicatania-home-web-v3",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

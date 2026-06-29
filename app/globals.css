@@ -1,24 +1,42 @@
 
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;min-height:100%;background:#03050b;color:#fff;font-family:Arial,Helvetica,sans-serif}
+
+html,body{
+  margin:0;
+  padding:0;
+  min-height:100%;
+  background:#03050b;
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
 a{text-decoration:none;color:inherit}
 
-/* Desktop: immagine completa dentro lo schermo */
 .home{
   width:100%;
   min-height:100vh;
   background:#03050b;
-  display:flex;
-  justify-content:center;
-  align-items:center;
 }
+
+/* Desktop: canvas fisso 1366x911 ridimensionato per entrare nello schermo */
+.stageWrap{
+  width:100vw;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  background:#03050b;
+}
+
 .stage{
   position:relative;
-  width:min(100vw,150vh);
+  width:min(1366px,100vw,150vh);
   aspect-ratio:3/2;
   line-height:0;
   background:#03050b;
 }
+
 .homeImage{
   display:block;
   width:100%;
@@ -27,6 +45,7 @@ a{text-decoration:none;color:inherit}
   user-select:none;
   -webkit-user-drag:none;
 }
+
 .hotspot{
   position:absolute;
   z-index:20;
@@ -36,7 +55,7 @@ a{text-decoration:none;color:inherit}
   overflow:hidden;
 }
 
-/* Coordinate originali su Bild 1 */
+/* Coordinate proporzionali sulla Bild 1 */
 .hotHome{top:2%;left:25.2%;width:7.8%;height:5%}
 .hotMuroNav{top:2%;left:33.7%;width:12.5%;height:5%}
 .hotRegoleNav{top:2%;left:47.8%;width:12.8%;height:5%}
@@ -47,26 +66,30 @@ a{text-decoration:none;color:inherit}
 .hotMuroBtn{top:65.5%;left:50.5%;width:31%;height:12.2%}
 .hotOpinione{top:78.4%;left:18.6%;width:62.8%;height:16.5%}
 
-/* Mobile: niente riduzione forzata nello schermo.
-   L'immagine prende tutta la larghezza del telefono e mantiene l'altezza naturale.
-   Se serve, si scorre verticalmente. Niente spazio nero, niente barra mobile. */
+/* Mobile: canvas grande, niente immagine minuscola.
+   Si vede una sezione grande della Home e si può scorrere verticalmente. */
 @media(max-width:760px){
-  .home{
-    display:block;
+  body{overflow-x:hidden}
+
+  .stageWrap{
     width:100%;
     min-height:100vh;
-    overflow-x:hidden;
-    overflow-y:auto;
-  }
-  .stage{
-    width:100vw;
     height:auto;
-    aspect-ratio:3/2;
-    margin:0;
+    display:block;
+    overflow:hidden;
   }
+
+  .stage{
+    width:1180px;
+    max-width:none;
+    aspect-ratio:3/2;
+    margin-left:50%;
+    transform:translateX(-50%);
+  }
+
   .homeImage{
     width:100%;
-    height:auto;
+    height:100%;
     object-fit:contain;
   }
 }
@@ -79,6 +102,7 @@ a{text-decoration:none;color:inherit}
     linear-gradient(180deg,rgba(5,7,13,.42),rgba(5,7,13,.96)),
     url('/bild1.png') center top/cover no-repeat;
 }
+
 .panel{
   width:min(980px,100%);
   margin:0 auto;
@@ -89,6 +113,7 @@ a{text-decoration:none;color:inherit}
   box-shadow:0 28px 70px rgba(0,0,0,.62);
   backdrop-filter:blur(12px);
 }
+
 .panel h1{
   margin:0 0 18px;
   font-family:Impact,Haettenschweiler,'Arial Black',sans-serif;
@@ -96,7 +121,14 @@ a{text-decoration:none;color:inherit}
   letter-spacing:.055em;
   font-size:clamp(42px,6vw,78px);
 }
-.panel p{margin:0;color:#e3e8f2;font-size:19px;line-height:1.65}
+
+.panel p{
+  margin:0;
+  color:#e3e8f2;
+  font-size:19px;
+  line-height:1.65;
+}
+
 .back{
   display:inline-block;
   margin-top:24px;
@@ -108,7 +140,9 @@ a{text-decoration:none;color:inherit}
   letter-spacing:.07em;
   font-size:13px;
 }
+
 .form{display:grid;gap:12px;margin-top:20px}
+
 .input,.textarea{
   width:100%;
   border:1px solid rgba(255,255,255,.16);
@@ -118,7 +152,9 @@ a{text-decoration:none;color:inherit}
   padding:14px 16px;
   font-size:16px;
 }
+
 .textarea{min-height:140px;resize:vertical}
+
 .button{
   cursor:pointer;
   border:1px solid rgba(255,255,255,.2);

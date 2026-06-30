@@ -83,7 +83,7 @@ Mobile v11:
   }
 
   .stage{
-    width:calc(100dvh * 1.18);
+    width:calc(100dvh * 1.08);
     height:100dvh;
     max-width:none;
     aspect-ratio:auto;

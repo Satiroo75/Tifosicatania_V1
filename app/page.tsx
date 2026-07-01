@@ -1,23 +1,2 @@
 import Link from 'next/link';
-
-export default function Home() {
-  return (
-    <main className="home">
-      <div className="stageWrap">
-        <section className="stage" aria-label="TifosiCatania.it homepage">
-          <img className="homeImage" src="/bild1.png" alt="TifosiCatania.it" />
-
-          <Link className="hotspot hotHome" href="/">Home</Link>
-          <Link className="hotspot hotMuroNav" href="/muro">Muro dei tifosi</Link>
-          <Link className="hotspot hotRegoleNav" href="/regole">Regole del sito</Link>
-          <Link className="hotspot hotContatti" href="/contatti">Contatti</Link>
-          <Link className="hotspot hotLogin" href="/login">Login</Link>
-          <Link className="hotspot hotRegistrati" href="/registrati">Registrati</Link>
-          <Link className="hotspot hotRegoleBtn" href="/regole">Regole del sito</Link>
-          <Link className="hotspot hotMuroBtn" href="/muro">Muro dei tifosi</Link>
-          <Link className="hotspot hotOpinione" href="/muro">Opinione della settimana</Link>
-        </section>
-      </div>
-    </main>
-  );
-}
+export default function Home(){return <main className="home"><section className="desktopHome"><div className="desktopStage"><img className="desktopImage" src="/desktop-master.png" alt="TifosiCatania.it desktop"/><Link className="hotspot dHome" href="/">Home</Link><Link className="hotspot dMuroNav" href="/muro">Muro dei tifosi</Link><Link className="hotspot dRegoleNav" href="/regole">Regole del sito</Link><Link className="hotspot dContatti" href="/contatti">Contatti</Link><Link className="hotspot dLogin" href="/login">Login</Link><Link className="hotspot dRegistrati" href="/registrati">Registrati</Link><Link className="hotspot dRegoleBtn" href="/regole">Regole del sito</Link><Link className="hotspot dMuroBtn" href="/muro">Muro dei tifosi</Link><Link className="hotspot dOpinione" href="/muro">Opinione</Link></div></section><section className="mobileHome"><div className="mobileStage"><img className="mobileImage" src="/mobile-master.png" alt="TifosiCatania.it mobile"/><Link className="hotspot mMenu" href="/muro">Menu</Link><Link className="hotspot mLoginTop" href="/login">Login</Link><Link className="hotspot mRegole" href="/regole">Regole</Link><Link className="hotspot mMuro" href="/muro">Muro</Link><Link className="hotspot mOpinione" href="/muro">Opinione</Link><Link className="hotspot mLogin" href="/login">Login</Link><Link className="hotspot mRegistrati" href="/registrati">Registrati</Link></div></section></main>}

@@ -56,3 +56,31 @@
   .mLogin{top:89.0%;left:7%;width:40%;height:7.2%}
   .mRegistrati{top:89.0%;right:7%;width:40%;height:7.2%}
 }
+
+/* MOBILE FULLSCREEN CROP V3 */
+@media(max-width:760px){
+  .mobileStage{
+    width:100vw;
+    height:100dvh;
+    max-width:none;
+    margin:0;
+    overflow:hidden;
+  }
+
+  .mobileImage{
+    width:112%;
+    height:112%;
+    max-width:none;
+    object-fit:cover;
+    object-position:center top;
+    transform:translate(-6%, -2.5%);
+  }
+
+  .mMenu{top:4.0%;left:7%;width:13%;height:6%}
+  .mLoginTop{top:4.0%;right:7%;width:25%;height:6%}
+  .mRegole{top:61.0%;left:9%;width:82%;height:7.3%}
+  .mMuro{top:68.8%;left:9%;width:82%;height:7.3%}
+  .mOpinione{top:76.8%;left:9%;width:82%;height:10.0%}
+  .mLogin{top:88.5%;left:8%;width:39%;height:7.4%}
+  .mRegistrati{top:88.5%;right:8%;width:39%;height:7.4%}
+}

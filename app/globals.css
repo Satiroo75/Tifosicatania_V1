@@ -6,3 +6,53 @@
 .mMenu{top:2.7%;left:4%;width:11%;height:5%}.mLoginTop{top:2.7%;right:4%;width:24%;height:5%}.mRegole{top:61.2%;left:10.8%;width:78%;height:7.1%}.mMuro{top:69.1%;left:10.8%;width:78%;height:7.1%}.mOpinione{top:77.3%;left:10.8%;width:78%;height:9.6%}.mLogin{top:89.2%;left:8%;width:38%;height:6.8%}.mRegistrati{top:89.2%;right:8%;width:38%;height:6.8%}
 @media(max-width:760px){.desktopHome{display:none}.mobileHome{display:block;width:100%;min-height:100vh;overflow-x:hidden}}
 .page{min-height:100vh;padding:80px 22px;background:linear-gradient(180deg,rgba(5,7,13,.42),rgba(5,7,13,.96)),url('/desktop-master.png') center top/cover no-repeat}.panel{width:min(980px,100%);margin:0 auto;padding:34px;border-radius:26px;background:rgba(5,9,18,.90);border:1px solid rgba(255,255,255,.16);box-shadow:0 28px 70px rgba(0,0,0,.62);backdrop-filter:blur(12px)}.panel h1{margin:0 0 18px;font-family:Impact,Haettenschweiler,'Arial Black',sans-serif;text-transform:uppercase;letter-spacing:.055em;font-size:clamp(42px,6vw,78px)}.panel p{margin:0;color:#e3e8f2;font-size:19px;line-height:1.65}.back{display:inline-block;margin-top:24px;padding:12px 18px;border-radius:999px;background:linear-gradient(135deg,#0057b8,#c1121f);font-weight:900;text-transform:uppercase;letter-spacing:.07em;font-size:13px}.form{display:grid;gap:12px;margin-top:20px}.input,.textarea{width:100%;border:1px solid rgba(255,255,255,.16);border-radius:16px;background:rgba(255,255,255,.07);color:white;padding:14px 16px;font-size:16px}.textarea{min-height:140px;resize:vertical}.button{cursor:pointer;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:linear-gradient(135deg,#0057b8,#c1121f);color:white;font-weight:900;text-transform:uppercase;letter-spacing:.07em;padding:12px 18px;width:fit-content}
+
+
+/* MOBILE FULLSCREEN OVERRIDE */
+@media(max-width:760px){
+  html,body{
+    width:100%;
+    min-height:100%;
+    overflow:hidden;
+    background:#03050b;
+  }
+
+  .desktopHome{display:none}
+
+  .mobileHome{
+    display:block;
+    width:100vw;
+    height:100dvh;
+    min-height:100dvh;
+    overflow:hidden;
+    background:#03050b;
+  }
+
+  .mobileStage{
+    position:relative;
+    width:100vw;
+    height:100dvh;
+    max-width:none;
+    margin:0;
+    overflow:hidden;
+    background:#03050b;
+  }
+
+  .mobileImage{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+    user-select:none;
+    -webkit-user-drag:none;
+  }
+
+  .mMenu{top:3.0%;left:5%;width:12%;height:6%}
+  .mLoginTop{top:3.0%;right:5%;width:25%;height:6%}
+  .mRegole{top:61.5%;left:8%;width:84%;height:7.2%}
+  .mMuro{top:69.3%;left:8%;width:84%;height:7.2%}
+  .mOpinione{top:77.2%;left:8%;width:84%;height:9.8%}
+  .mLogin{top:89.0%;left:7%;width:40%;height:7.2%}
+  .mRegistrati{top:89.0%;right:7%;width:40%;height:7.2%}
+}
